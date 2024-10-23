@@ -1,0 +1,6 @@
+fastapi[standard]==0.115.3
+sqlalchemy==2.0.36
+uvicorn[standard]==0.32.0
+psycopg2-binary==2.9.10
+bcrypt==4.2.0
+uvicorn[standard]==0.32.0
