@@ -78,8 +78,13 @@ Instale las dependencias del proyecto:
 Por último, para correr el proyecto en sí, ejecute el siguiente comando:
 
 ```sh
+	cd app 
+```
+
+```sh
 	uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ```
+
 
 Con este comando debe correr el proyecto correctamente. Tenga en cuenta que la bandera --reload hace que el servidor se mantenga en pie constantemente. Sin 
 ella, ante un error considerable, el servidor se detiene.
