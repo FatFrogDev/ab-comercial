@@ -5,8 +5,9 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.engine import URL
 from sqlalchemy.orm import declarative_base as declarative_base
 
+import os
 
-DATABASE_URL = "" # TODO: Set this according to the proper URL
+DATABASE_URL = os.getenv("DATABASE_URL") # TODO: Set this according to the proper URL
 
 engine = create_engine(DATABASE_URL)
 Session = sessionmaker(autocommit=False, autoflush=False, bind=engine)
