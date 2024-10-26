@@ -26,7 +26,7 @@ class LocalityService:
 
 
     def find_by_name(self, db : Session, locality_name: str):
-        locality_name = locality_entity.locality_name.strip()
+        locality_name = locality_name.strip()
 
         if locality_name.__contains__(" "):
             locality_name = locality_name.replace(" ", "-")

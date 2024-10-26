@@ -1,5 +1,7 @@
 from sqlalchemy.orm import Session
 from domain.models.brand import BrandEntity
+from domain.models.car import CarEntity
+
 
 class BrandRepository:
 

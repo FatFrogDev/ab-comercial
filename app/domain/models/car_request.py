@@ -40,8 +40,16 @@ class CarRequestInDTO(BaseModel):
     requested_at_locality: str
 
 class CarRequestOutDTO(BaseModel):
-    car_request_id: str
+    car_request_id: Optional[str]=None
     request_date: datetime.date
     user_requesting: str
+    user_id: str
+    brand_id: int | str
     car_requested: str
     requested_at_locality: str
+
+class CarRequestUpdateDTO(BaseModel):
+    car_requested: Optional[str]=None
+    user_requesting: str
+    user_id: Optional[str]=None
+    requested_at_locality: str    

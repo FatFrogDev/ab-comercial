@@ -21,7 +21,10 @@ class BrandService:
 
 
     def find_brand_by_id(self, db:Session, brand_id: int):
-        return self.brand_repository.find_brand_by_id(db, brand_id)
+        brand_entity = self.brand_repository.find_brand_by_id(db, brand_id)
+        if brand_entity is None:
+            raise HTTPException(status_code=404, detail=f"Brand with id: {brand_id} not found")
+        return BrandDTO(brand_name=brand_entity.brand_name)
 
 
     def update_brand(self, db:Session, brand_id:int, brandDTO: BrandDTO):

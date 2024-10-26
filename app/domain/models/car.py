@@ -15,7 +15,7 @@ class CarEntity(Base):
     __tablename__ = 'cars'
 
     car_id = Column(UUID, primary_key=True, default=uuid.uuid4, nullable=False)
-    car_plate = Column(VARCHAR(255), nullable=False)
+    car_plate = Column(VARCHAR(255), nullable=True)
     car_cc = Column(VARCHAR(20))
     car_name=Column(VARCHAR(60))
     # Relationships
