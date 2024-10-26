@@ -14,6 +14,7 @@ from domain.models.car import CarEntity
 from domain.models.car_request import CarRequestEntity
 from domain.models.locality import LocalityEntity
 from domain.models.user import UserEntity
+import os
 
 router = APIRouter()
 
@@ -30,7 +31,8 @@ app = FastAPI(
 
 origins=["http://localhost",
     "http://localhost:5173",
-    "http://localhost:3000/"
+    "http://localhost:3000/",
+    os.getenv("FRONTEND_URL")
     ]
 
 # CORS Middleware config
